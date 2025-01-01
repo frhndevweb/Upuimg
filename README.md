@@ -105,5 +105,5 @@ CREATE TABLE comments (
 5. Buka browser dan akses `http://localhost:8000`.
 
 ## Demo
-Lihat demo proyek ini `https://Upuimg.kesug.com`
+Lihat demo proyek ini `https://upuimg.kesug.com`
 ---
