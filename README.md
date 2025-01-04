@@ -113,9 +113,7 @@ CREATE TABLE comments (
 
 3. **Import Database**  
    - Buka **phpMyAdmin** melalui browser dengan mengakses `http://localhost/phpmyadmin`.  
-   - Buat database baru dengan nama `social_media`.  
-   - Import file `db.sql` (yang berisi struktur tabel dan data) ke database tersebut.  
-
+   - Buat database baru dengan nama `social_media`/salin Query SQL diatas atau bisa salin seluruh kode Query SQL yang ada di file `db.sql`.
 4. **Konfigurasi File `db.php`**  
    - Pastikan file `db.php` memiliki konfigurasi yang sesuai dengan server MySQL lokal XAMPP. Contoh:  
      ```php
