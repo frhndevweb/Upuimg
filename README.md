@@ -98,12 +98,61 @@ CREATE TABLE comments (
    ```
 2. Import file `db.sql` ke database MySQL kamu.
 3. Pastikan file `db.php` telah dikonfigurasi dengan kredensial database kamu.
-4. Jalankan server lokal dengan PHP:
-   ```bash
-   php -S localhost:8000
-   ```
-5. Buka browser dan akses `http://localhost:8000`.
 
-## Demo
-Lihat demo proyek ini `https://upuimg.kesug.com`
----
+## Cara Menjalankan dengan XAMPP
+
+1. **Instal XAMPP**  
+   - Unduh dan instal [XAMPP](https://www.apachefriends.org/index.html) di komputer kamu.  
+   - Jalankan XAMPP, kemudian aktifkan modul **Apache** dan **MySQL**.  
+
+2. **Pindahkan Proyek ke Folder XAMPP**  
+   - Salin seluruh folder proyek `Upuimg` ke folder `htdocs` di direktori instalasi XAMPP. Contoh:  
+     ```
+     C:\xampp\htdocs\Upuimg
+     ```
+
+3. **Import Database**  
+   - Buka **phpMyAdmin** melalui browser dengan mengakses `http://localhost/phpmyadmin`.  
+   - Buat database baru dengan nama `social_media`.  
+   - Import file `db.sql` (yang berisi struktur tabel dan data) ke database tersebut.  
+
+4. **Konfigurasi File `db.php`**  
+   - Pastikan file `db.php` memiliki konfigurasi yang sesuai dengan server MySQL lokal XAMPP. Contoh:  
+     ```php
+     <?php
+     $host = 'localhost';
+     $db   = 'social_media';
+     $user = 'root'; // Default username MySQL di XAMPP
+     $pass = '';     // Kosongkan jika tidak ada password
+     $charset = 'utf8mb4';
+
+     $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+     $options = [
+         PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+         PDO::ATTR_EMULATE_PREPARES   => false,
+     ];
+
+     try {
+         $pdo = new PDO($dsn, $user, $pass, $options);
+     } catch (\PDOException $e) {
+         throw new \PDOException($e->getMessage(), (int)$e->getCode());
+     }
+     ?>
+     ```
+
+5. **Akses Proyek di Browser**  
+   - Buka browser dan akses URL berikut:  
+     ```
+     http://localhost/Upuimg
+     ```
+   - Proyek kini dapat digunakan! Pastikan semua fitur seperti login, registrasi, dan unggah gambar berjalan dengan baik.
+
+6. **Testing dan Debugging**  
+   - Jika ada masalah, cek:  
+     - Kredensial di `db.php`.  
+     - Struktur database dan data di phpMyAdmin.  
+     - Struktur direktori proyek di folder `htdocs`.  
+
+
+**Selamat Mencoba😁**
