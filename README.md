@@ -25,6 +25,9 @@ Upuimg/
 ├── uploads/        # Folder penyimpanan gambar.
 ```
 
+## Lihat Demo Langsung
+**[Disini](https://upuimg.kesug.com)**
+
 ## Database
 **Nama Database**: `social_media`
 
