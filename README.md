@@ -1,6 +1,6 @@
 # Upuimg
 
-![Upuimg Logo](https://upuimg.kesug.com/upuimg.png)
+[Upuimg Logo](https://upuimg.kesug.com/upuimg.png)
 
 **Upuimg** adalah sebuah platform sosial sederhana yang memungkinkan pengguna untuk mendaftar, login, mengunggah gambar, memberi like, dan mengomentari unggahan. Dibuat dengan PHP dan MySQL, proyek ini adalah implementasi dasar dari jejaring sosial minimalis buatan saya sendiri.
 
